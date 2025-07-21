@@ -26,13 +26,53 @@ const Events = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simular envio do formulário
-    setTimeout(() => {
+    try {
+      const response = await fetch('https://formspree.io/f/mblkdnbz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          whatsapp: formData.whatsapp,
+          guests: formData.guests,
+          city: formData.city,
+          date: formData.date,
+          subject: 'Solicitação de Orçamento - Evento Pizza Napolitana',
+          message: `
+            Nova solicitação de orçamento para evento:
+            
+            Nome: ${formData.name}
+            E-mail: ${formData.email}
+            WhatsApp: ${formData.whatsapp}
+            Número de convidados: ${formData.guests}
+            Cidade: ${formData.city}
+            Data desejada: ${formData.date}
+          `
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        // Limpar formulário após envio bem-sucedido
+        setFormData({
+          name: '',
+          email: '',
+          whatsapp: '',
+          guests: '',
+          city: '',
+          date: ''
+        });
+      } else {
+        throw new Error('Erro ao enviar formulário');
+      }
+    } catch (error) {
+      console.error('Erro ao enviar formulário:', error);
+      alert('Erro ao enviar solicitação. Tente novamente ou entre em contato pelo WhatsApp.');
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      // Aqui você implementaria o envio real para guilacerda@gmail.com
-      console.log('Dados enviados para guilacerda@gmail.com:', formData);
-    }, 2000);
+    }
   };
 
   const inputVariants = {
