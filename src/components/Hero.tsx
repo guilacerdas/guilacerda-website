@@ -15,14 +15,14 @@ const Hero = () => {
       </div>
       {userWidth < 1024 && (
         <img
-          src="/src/images/guilacerda-pizzaiolo-1 (1).jpg"
+          src="/images/guilacerda-pizzaiolo-1 (1).jpg"
           alt=""
           className="absolute object-cover w-full h-full opacity-40"
         />
       )}
       {userWidth > 1024 && (
         <img
-          src="/src/images/guilacerda-pizzaiolo-6 (1).jpg"
+          src="/images/guilacerda-pizzaiolo-6 (1).jpg"
           alt=""
           className="absolute object-cover w-full h-full opacity-40"
         />

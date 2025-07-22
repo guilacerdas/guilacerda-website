@@ -89,7 +89,7 @@ const About = () => {
               <motion.img
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.6 }}
-                src="src/images/guilacerda-pizzaiolo-1 (2).jpg"
+                src="/images/guilacerda-pizzaiolo-1 (2).jpg"
                 alt="Gui Lacerda preparando pizza"
                 className="object-cover w-full h-96"
               />

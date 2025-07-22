@@ -9,7 +9,7 @@ const Products = () => {
       description:
         "Massa de Fermentação lenta com farinha 00, molho de tomate pelatti, muçarela de búfala, tomate grape e manjericão fresco",
       price: "R$ 42,00",
-      image: "src/images/Margherita-Pizza-rotated.jpeg",
+      image: "/images/Margherita-Pizza-rotated.jpeg",
       link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
     },
     {
@@ -17,7 +17,7 @@ const Products = () => {
       description:
         "Massa de Fermentação lenta com farinha 00, molho de tomate pelatti, muçarela de búfala, calabresa fatiada, parmesão e cebola roxa",
       price: "R$ 48,00",
-      image: "src/images/Calabresa.jpg",
+      image: "/images/Calabresa.jpg",
       link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
     },
     {
@@ -25,7 +25,7 @@ const Products = () => {
       description:
         "Massa de Fermentação lenta com farinha 00, molho de tomate pelatti, tomate confitado, cebola roxa e noz pecan",
       price: "R$ 48,00",
-      image: "src/images/pizza_sessions-8 (2).jpg",
+      image: "/images/pizza_sessions-8 (2).jpg",
       link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
     },
     {
@@ -33,7 +33,7 @@ const Products = () => {
       description:
         "Massa de Fermentação lenta com farinha 00, molho de tomate pelatti, muçarela, cebola caramelizada e gorgonzola",
       price: "R$ 49,00",
-      image: "src/images/IMG_1630.jpg",
+      image: "/images/IMG_1630.jpg",
       link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
     },
   ];
@@ -43,7 +43,7 @@ const Products = () => {
     description:
       "Choripizza traz uma combinação irresistível de linguiça artesanal suculenta, molho chimichurri e muçarela, tudo sobre uma base leve de farinha tipo 00 com fermentação lenta, no estilo napolitano. Cada pedaço revela o sabor defumado da linguiça harmonizado com o frescor das ervas, criando uma experiência única e cheia de personalidade.",
     price: "R$ 35,00",
-    image: "src/images/WhatsApp Image 2025-03-26 at 15.56.13 (1).jpeg",
+    image: "/images/WhatsApp Image 2025-03-26 at 15.56.13 (1).jpeg",
     link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
   };
 
