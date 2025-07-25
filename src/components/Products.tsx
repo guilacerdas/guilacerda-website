@@ -10,7 +10,7 @@ const Products = () => {
         "Massa de Fermentação lenta com farinha 00, molho de tomate pelatti, muçarela de búfala, tomate grape e manjericão fresco",
       price: "R$ 42,00",
       image: "/images/Margherita-Pizza-rotated.jpeg",
-      link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
+      link: "#",
     },
     {
       name: "Calabresa",
@@ -18,7 +18,7 @@ const Products = () => {
         "Massa de Fermentação lenta com farinha 00, molho de tomate pelatti, muçarela de búfala, calabresa fatiada, parmesão e cebola roxa",
       price: "R$ 48,00",
       image: "/images/Calabresa.jpg",
-      link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
+      link: "#",
     },
     {
       name: "Tomate Confit",
@@ -26,7 +26,7 @@ const Products = () => {
         "Massa de Fermentação lenta com farinha 00, molho de tomate pelatti, tomate confitado, cebola roxa e noz pecan",
       price: "R$ 48,00",
       image: "/images/pizza_sessions-8 (2).jpg",
-      link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
+      link: "#",
     },
     {
       name: "Cebola Caramelizada com Gorgonzola",
@@ -34,7 +34,7 @@ const Products = () => {
         "Massa de Fermentação lenta com farinha 00, molho de tomate pelatti, muçarela, cebola caramelizada e gorgonzola",
       price: "R$ 49,00",
       image: "/images/IMG_1630.jpg",
-      link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
+      link: "#",
     },
   ];
 
@@ -44,7 +44,7 @@ const Products = () => {
       "Choripizza traz uma combinação irresistível de linguiça artesanal suculenta, molho chimichurri e muçarela, tudo sobre uma base leve de farinha tipo 00 com fermentação lenta, no estilo napolitano. Cada pedaço revela o sabor defumado da linguiça harmonizado com o frescor das ervas, criando uma experiência única e cheia de personalidade.",
     price: "R$ 35,00",
     image: "/images/WhatsApp Image 2025-03-26 at 15.56.13 (1).jpeg",
-    link: "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=p9XLFJTsukazFMwPyXKhYbocZmuiHu5LvL_GiTSGJ6hUREoyN1RNUlk3Qk4yTURETVA1MzhONzNGOS4u",
+    link: "#",
   };
 
   const containerVariants = {
@@ -81,7 +81,11 @@ const Products = () => {
       className={`bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer group relative ${
         isSpecial ? "ring-4 ring-yellow-400" : ""
       }`}
-      onClick={() => window.open(product.link, "_blank")}
+      onClick={() =>
+        window.alert(
+          "Obrigado pelo seu interese. Estou trabalhando para implementar o pagamento online! A comunicação da liberação dos pedidos será feita via instagram @gui.lacerdas"
+        )
+      }
     >
       {isSpecial && (
         <motion.div
