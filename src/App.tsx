@@ -9,11 +9,11 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-red-50">
       <Hero />
+      <CartButton />
       <Products />
       <Events />
       <About />
       <Footer />
-      <CartButton />
     </div>
   );
 }

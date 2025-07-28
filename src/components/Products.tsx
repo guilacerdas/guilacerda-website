@@ -1,8 +1,31 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Flame, Heart } from "lucide-react";
 
+type CartItem = {
+  name: string;
+  price: string;
+  qtd: number;
+};
+
 const Products = () => {
+  const addCart = (name: string, price: string, qtd: number) => {
+    const currentCart = JSON.parse(
+      window.localStorage.getItem("pizzaCart") || "[]"
+    );
+    const priceNumber = parseFloat(price.replace("R$", "").replace(",", "."));
+
+    const newItem = { name, priceNumber, qtd };
+
+    const index = currentCart.findIndex((item: CartItem) => item.name === name);
+    if (index !== -1) {
+      currentCart[index].qtd += qtd;
+    } else {
+      currentCart.push(newItem);
+    }
+    window.localStorage.setItem("pizzaCart", JSON.stringify(currentCart));
+    window.dispatchEvent(new Event("cart-updated"));
+  };
+
   const pizzas = [
     {
       name: "Marguerita",
@@ -81,11 +104,6 @@ const Products = () => {
       className={`bg-white rounded-2xl shadow-lg overflow-hidden cursor-pointer group relative ${
         isSpecial ? "ring-4 ring-yellow-400" : ""
       }`}
-      onClick={() =>
-        window.alert(
-          "Obrigado pelo seu interese. Estou trabalhando para implementar o pagamento online! A comunicação da liberação dos pedidos será feita via instagram @gui.lacerdas"
-        )
-      }
     >
       {isSpecial && (
         <motion.div
@@ -132,6 +150,7 @@ const Products = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-4 py-2 font-semibold text-white transition-colors bg-red-600 rounded-lg hover:bg-red-700"
+            onClick={() => addCart(product.name, product.price, 1)}
           >
             Comprar
           </motion.button>
