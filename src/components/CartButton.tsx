@@ -7,6 +7,8 @@ export default function CartButton() {
   const [isOpen, setIsOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
 
+  const cartItems = JSON.parse(localStorage.getItem("pizzaCart") || "[]");
+
   const updateCartCount = () => {
     const cart = JSON.parse(localStorage.getItem("pizzaCart") || "[]");
     const total = cart.reduce(
@@ -46,7 +48,9 @@ export default function CartButton() {
       </button>
 
       {/* Modal */}
-      {isOpen && <CartModal onClose={() => setIsOpen(false)} />}
+      {isOpen && (
+        <CartModal onClose={() => setIsOpen(false)} cartItems={cartItems} />
+      )}
     </>
   );
 }
