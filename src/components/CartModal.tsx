@@ -1,3 +1,4 @@
+import { Trash2 } from "lucide-react";
 import { useState } from "react";
 
 interface CartItem {
@@ -23,6 +24,7 @@ export default function CartModal({ onClose, cartItems }: CartModalProps) {
     updatedItems[index].qtd += 1;
     setItems(updatedItems);
     updateLocalStorage(updatedItems);
+    window.dispatchEvent(new Event("cart-updated"));
   };
 
   const decreaseQuantity = (index: number) => {
@@ -31,7 +33,15 @@ export default function CartModal({ onClose, cartItems }: CartModalProps) {
       updatedItems[index].qtd -= 1;
       setItems(updatedItems);
       updateLocalStorage(updatedItems);
+      window.dispatchEvent(new Event("cart-updated"));
     }
+  };
+
+  const removeItem = (index: number) => {
+    const updatedItems = items.filter((_, i) => i !== index);
+    setItems(updatedItems);
+    updateLocalStorage(updatedItems);
+    window.dispatchEvent(new Event("cart-updated"));
   };
 
   const total = items.reduce(
@@ -84,6 +94,12 @@ export default function CartModal({ onClose, cartItems }: CartModalProps) {
                     className="px-2 bg-gray-200 rounded"
                   >
                     +
+                  </button>
+                  <button
+                    onClick={() => removeItem(index)}
+                    className="text-lg font-bold text-red-500 hover:text-red-700"
+                  >
+                    <Trash2 size={18} />
                   </button>
                 </div>
                 <span className="text-center">
