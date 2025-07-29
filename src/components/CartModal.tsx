@@ -79,7 +79,7 @@ export default function CartModal({ onClose, cartItems }: CartModalProps) {
             <p className="mb-4 text-gray-700">Nenhum item adicionado ainda.</p>
             <button
               onClick={handleClose}
-              className="px-4 py-2 text-white transition bg-blue-600 rounded hover:bg-blue-700"
+              className="px-4 py-2 font-semibold text-white transition-colors bg-red-600 rounded-lg hover:bg-red-700"
             >
               Voltar às compras
             </button>
