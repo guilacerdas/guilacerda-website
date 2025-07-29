@@ -32,7 +32,7 @@ export default function CartButton() {
 
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed p-4 text-white transition bg-yellow-400 rounded-full shadow-lg bottom-5 right-5 hover:bg-yellow-500"
+        className="fixed z-50 hidden p-4 text-white transition bg-yellow-400 rounded-full shadow-lg lg:block bottom-5 right-5 hover:bg-yellow-500"
       >
         <motion.div
           animate={{ rotate: [0, 10, -10, 0] }}
