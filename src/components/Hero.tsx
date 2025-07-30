@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="absolute w-40 h-40 bg-white rounded-full bottom-32 left-1/4"></div>
         <div className="absolute bg-white rounded-full bottom-20 right-20 w-28 h-28"></div>
       </div>
-      {userWidth < 1024 && (
+      {userWidth <= 1024 && (
         <img
           src="/images/guilacerda-pizzaiolo-1 (1).jpg"
           alt=""
