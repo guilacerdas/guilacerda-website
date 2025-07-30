@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Trash2, ChevronRight } from "lucide-react";
 
 interface CartItem {
@@ -14,6 +14,7 @@ interface StepOneCartProps {
   onDeliveryChange: (type: "retirada" | "entrega") => void;
   onNext: () => void;
   onClose: () => void;
+  onTotalChange: (total: number) => void;
 }
 
 export default function StepOneCart({
@@ -23,6 +24,7 @@ export default function StepOneCart({
   onDeliveryChange,
   onNext,
   onClose,
+  onTotalChange,
 }: StepOneCartProps) {
   const increaseQuantity = (index: number) => {
     const updated = [...items];
@@ -49,6 +51,11 @@ export default function StepOneCart({
   );
   const deliveryFee = deliveryType === "entrega" ? 15 : 0;
   const total = itemsTotal + deliveryFee;
+
+  // Levanta o total sempre que ele mudar
+  useEffect(() => {
+    onTotalChange(total);
+  }, [total, onTotalChange]);
 
   return (
     <>
