@@ -15,6 +15,9 @@ interface CartModalProps {
 export default function CartModal({ onClose, cartItems }: CartModalProps) {
   const [items, setItems] = useState<CartItem[]>([...cartItems]);
   const [closing, setClosing] = useState(false);
+  const [deliveryType, setDeliveryType] = useState<"retirada" | "entrega">(
+    "retirada"
+  );
 
   const updateLocalStorage = (updatedItems: CartItem[]) => {
     localStorage.setItem("pizzaCart", JSON.stringify(updatedItems));
@@ -48,10 +51,12 @@ export default function CartModal({ onClose, cartItems }: CartModalProps) {
     setTimeout(onClose, 200); // Espera a animação de saída
   };
 
-  const total = items.reduce(
+  const itemsTotal = cartItems.reduce(
     (sum, item) => sum + item.priceNumber * item.qtd,
     0
   );
+  const deliveryFee = deliveryType === "entrega" ? 15 : 0;
+  const total = itemsTotal + deliveryFee;
 
   return (
     <div
@@ -131,11 +136,36 @@ export default function CartModal({ onClose, cartItems }: CartModalProps) {
                 </button>
               </div>
             ))}
+            <div className="mt-4">
+              <h3 className="mb-2 font-semibold text-md">
+                Forma de Recebimento:
+              </h3>
+              <div className="flex gap-4">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    value="retirada"
+                    checked={deliveryType === "retirada"}
+                    onChange={() => setDeliveryType("retirada")}
+                    className="accent-red-600"
+                  />
+                  Retirada
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="radio"
+                    value="entrega"
+                    checked={deliveryType === "entrega"}
+                    onChange={() => setDeliveryType("entrega")}
+                    className="accent-red-600"
+                  />
+                  Entrega (+R$ 15,00)
+                </label>
+              </div>
+            </div>
 
-            {/* Total Geral */}
-            <div className="flex justify-between mt-4 text-lg font-bold">
-              <span>Total:</span>
-              <span>R$ {total.toFixed(2)}</span>
+            <div className="mt-6 text-lg font-bold">
+              Total: R$ {total.toFixed(2).replace(".", ",")}
             </div>
           </>
         )}
