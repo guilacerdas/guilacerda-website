@@ -28,8 +28,6 @@ export default function CartButton() {
 
   return (
     <>
-      {/* Botão do carrinho */}
-
       <button
         onClick={() => setIsOpen(true)}
         className="fixed z-50 hidden p-4 text-white transition bg-yellow-400 rounded-full shadow-lg lg:block bottom-5 right-5 hover:bg-yellow-500"
@@ -47,7 +45,6 @@ export default function CartButton() {
         )}
       </button>
 
-      {/* Modal */}
       {isOpen && (
         <CartModal onClose={() => setIsOpen(false)} cartItems={cartItems} />
       )}

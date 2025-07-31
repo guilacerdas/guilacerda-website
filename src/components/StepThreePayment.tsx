@@ -35,9 +35,7 @@ export default function StepThreePayment({
         Pedido enviado com sucesso!
       </h2>
       <p className="text-gray-700">Confirmação mediante pagamento via PIX.</p>
-
       <div className="p-4 space-y-4 bg-gray-100 rounded">
-        {/* Chave PIX com botão de cópia */}
         <div className="flex items-center justify-center gap-2">
           <span className="text-sm font-medium">Chave PIX:</span>
           <span className="px-3 py-1 font-mono text-sm bg-white border border-gray-300 rounded">
@@ -59,10 +57,8 @@ export default function StepThreePayment({
         {copied && (
           <p className="text-sm text-green-600 animate-pulse">Chave copiada!</p>
         )}
-
-        {/* Imagem do QR Code estático */}
         <img
-          src="public/images/qrcode-caixa.JPG" // ajuste o caminho conforme necessário
+          src="/images/qrcode-caixa.jpg"
           alt="QR Code para pagamento PIX"
           className="w-40 h-40 mx-auto"
         />

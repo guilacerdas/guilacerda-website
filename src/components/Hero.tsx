@@ -3,10 +3,9 @@ import { ChefHat, Flame } from "lucide-react";
 
 const Hero = () => {
   const userWidth = window.innerWidth;
-  console.log("User Width:", userWidth);
+
   return (
     <section className="relative flex items-center justify-center min-h-screen overflow-hidden bg-gradient-to-br from-red-600 via-orange-600 to-yellow-500">
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute w-32 h-32 bg-white rounded-full top-20 left-20"></div>
         <div className="absolute w-24 h-24 rounded-full bg-blue top-40 right-32"></div>
@@ -27,8 +26,6 @@ const Hero = () => {
           className="absolute object-cover w-full h-full opacity-40"
         />
       )}
-      {/* Hero Content */}
-
       <div className="container relative z-10 p-10 text-center bg-black rounded-lg shadow-lg bg-opacity-20 backdrop-blur-sm">
         <motion.div
           initial={{ scale: 0 }}
@@ -102,7 +99,6 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Floating Pizza Animation */}
       <motion.div
         animate={{
           rotate: 360,

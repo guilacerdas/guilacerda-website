@@ -96,7 +96,7 @@ export default function StepTwoCustomerData({
 
   return (
     <div className="space-y-4">
-      <h2 className="mb-4 text-lg font-bold">DADOS DO CLIENTE</h2>
+      <h2 className="mb-4 text-lg font-bold">Dados do Comprador</h2>
 
       <div>
         <input

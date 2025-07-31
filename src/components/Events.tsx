@@ -57,7 +57,6 @@ const Events = () => {
 
       if (response.ok) {
         setIsSubmitted(true);
-        // Limpar formulário após envio bem-sucedido
         setFormData({
           name: "",
           email: "",

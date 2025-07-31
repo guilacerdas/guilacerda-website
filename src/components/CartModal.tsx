@@ -18,7 +18,7 @@ interface CartModalProps {
 export default function CartModal({ onClose, cartItems }: CartModalProps) {
   const [items, setItems] = useState<CartItem[]>([...cartItems]);
   const [closing, setClosing] = useState(false);
-  const [step, setStep] = useState(1); // Etapas: 1=Carrinho, 2=Cliente, 3=Pagamento
+  const [step, setStep] = useState(1);
   const [deliveryType, setDeliveryType] = useState<"retirada" | "entrega">(
     "retirada"
   );
@@ -51,7 +51,6 @@ export default function CartModal({ onClose, cartItems }: CartModalProps) {
 
         {items.length > 0 && <ProgressBar currentStep={step} totalSteps={3} />}
 
-        {/* Conteúdo das Etapas */}
         {step === 1 && (
           <StepOneCart
             items={items}

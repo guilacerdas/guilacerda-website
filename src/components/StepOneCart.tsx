@@ -52,7 +52,6 @@ export default function StepOneCart({
   const deliveryFee = deliveryType === "entrega" ? 15 : 0;
   const total = itemsTotal + deliveryFee;
 
-  // Levanta o total sempre que ele mudar
   useEffect(() => {
     onTotalChange(total);
   }, [total, onTotalChange]);
@@ -73,7 +72,6 @@ export default function StepOneCart({
         </div>
       ) : (
         <>
-          {/* Cabeçalho da Tabela */}
           <div className="grid grid-cols-5 gap-2 pb-2 mb-2 text-sm font-bold border-b">
             <span>Produto</span>
             <span className="text-center">Qtd</span>
@@ -81,8 +79,6 @@ export default function StepOneCart({
             <span className="text-right">Subtotal</span>
             <span className="text-center">Remover</span>
           </div>
-
-          {/* Lista com scroll vertical */}
           <div className="pr-1 mb-4 overflow-y-auto max-h-44 lg:max-h-full">
             {items.map((item, index) => (
               <div
@@ -120,8 +116,6 @@ export default function StepOneCart({
               </div>
             ))}
           </div>
-
-          {/* Forma de Entrega */}
           <div className="mt-4">
             <h3 className="mb-2 font-semibold text-md">
               Forma de Recebimento:
@@ -159,8 +153,6 @@ export default function StepOneCart({
               </label>
             </div>
           </div>
-
-          {/* Total e botão Próximo */}
           <div className="flex flex-col items-end mt-6">
             <div className="mb-4 text-lg font-bold">
               Total: R$ {total.toFixed(2).replace(".", ",")}
