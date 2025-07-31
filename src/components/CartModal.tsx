@@ -76,7 +76,7 @@ export default function CartModal({ onClose, cartItems }: CartModalProps) {
           />
         )}
 
-        {step === 3 && <StepThreePayment onClose={handleClose} />}
+        {step === 3 && <StepThreePayment onClose={handleClose} total={total} />}
       </div>
     </div>
   );

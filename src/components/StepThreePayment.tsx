@@ -1,8 +1,28 @@
+import React, { useState } from "react";
+import { ClipboardCopy, Check } from "lucide-react";
+
 interface StepThreePaymentProps {
   onClose: () => void;
+  total: number;
 }
 
-export default function StepThreePayment({ onClose }: StepThreePaymentProps) {
+export default function StepThreePayment({
+  onClose,
+  total,
+}: StepThreePaymentProps) {
+  const [copied, setCopied] = useState(false);
+  const pixKey = "guilacerda@gmail.com";
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(pixKey);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Erro ao copiar PIX:", err);
+    }
+  };
+
   const handleFinish = () => {
     localStorage.removeItem("pizzaCart");
     window.dispatchEvent(new Event("cart-updated"));
@@ -10,29 +30,54 @@ export default function StepThreePayment({ onClose }: StepThreePaymentProps) {
   };
 
   return (
-    <div className="space-y-4 text-center">
+    <div className="space-y-5 text-center">
       <h2 className="text-lg font-bold text-green-700">
-        Pedido Enviado, confirmação mediante pagamento.
+        Pedido enviado com sucesso!
       </h2>
+      <p className="text-gray-700">Confirmação mediante pagamento via PIX.</p>
 
-      {/* QR Code (pode ser uma imagem gerada manualmente ou via lib futura) */}
-      <div className="flex justify-center">
+      <div className="p-4 space-y-4 bg-gray-100 rounded">
+        {/* Chave PIX com botão de cópia */}
+        <div className="flex items-center justify-center gap-2">
+          <span className="text-sm font-medium">Chave PIX:</span>
+          <span className="px-3 py-1 font-mono text-sm bg-white border border-gray-300 rounded">
+            {pixKey}
+          </span>
+          <button
+            onClick={handleCopy}
+            className="p-1 transition-colors bg-white border rounded hover:bg-gray-200"
+            aria-label="Copiar chave PIX"
+          >
+            {copied ? (
+              <Check size={18} className="text-green-600" />
+            ) : (
+              <ClipboardCopy size={18} className="text-gray-600" />
+            )}
+          </button>
+        </div>
+
+        {copied && (
+          <p className="text-sm text-green-600 animate-pulse">Chave copiada!</p>
+        )}
+
+        {/* Imagem do QR Code estático */}
         <img
-          src="/qr-code-pix.png" // substitua pelo seu QR real ou use uma lib no futuro
-          alt="QR Code para pagamento"
-          className="w-40 h-40"
+          src="public/images/qrcode-caixa.JPG" // ajuste o caminho conforme necessário
+          alt="QR Code para pagamento PIX"
+          className="w-40 h-40 mx-auto"
         />
+
+        <p className="text-sm text-gray-600">
+          Escaneie o QR Code ou use a chave para pagar <br />
+          <strong className="text-black">
+            R$ {total.toFixed(2).replace(".", ",")}
+          </strong>
+        </p>
       </div>
 
-      {/* Chave PIX */}
-      <p className="text-sm font-medium">
-        <strong>Chave PIX:</strong> guilacerda@gmail.com
-      </p>
-
-      {/* Botão para concluir */}
       <button
         onClick={handleFinish}
-        className="px-4 py-2 mt-2 text-white bg-green-600 rounded hover:bg-green-700"
+        className="px-6 py-2 font-semibold text-white bg-green-600 rounded hover:bg-green-700"
       >
         Concluir
       </button>

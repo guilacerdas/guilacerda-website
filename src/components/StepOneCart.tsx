@@ -126,6 +126,16 @@ export default function StepOneCart({
             <h3 className="mb-2 font-semibold text-md">
               Forma de Recebimento:
             </h3>
+            <h6 className="mb-2 text-xs font-extralight">
+              <span className="font-semibold"> Local de retirada:</span> Av.
+              A.J. Renner, 1800 - Humaitá - Porto Alegre/RS
+            </h6>
+            <h6 className="mb-2 text-xs font-extralight">
+              <span className="font-semibold">
+                {" "}
+                Entregas a partir das 19:00{" "}
+              </span>{" "}
+            </h6>
             <div className="flex gap-4">
               <label className="flex items-center gap-2">
                 <input
