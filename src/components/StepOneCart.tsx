@@ -127,7 +127,7 @@ export default function StepOneCart({
             <h6 className="mb-2 text-xs font-extralight">
               <span className="font-semibold">
                 {" "}
-                Entregas a partir das 19:00{" "}
+                Entregas a partir das 19:00 - 14/08/2025
               </span>{" "}
             </h6>
             <div className="flex gap-4">
