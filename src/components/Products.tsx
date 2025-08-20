@@ -67,14 +67,14 @@ const Products = () => {
       image: "/images/pizza-pre-assada.png",
       link: "#",
     },
-    {
-      name: "Focaccia 15x15cm ",
-      description:
-        "Focaccia com 48 horas de fermentação. Alecrim e sal grosso. Produzida com farinha italiana. Essa mini focaccia tem 4 lados cheios de caramelização na casca",
-      price: "R$ 18,00",
-      image: "/images/focaccia15x15.png",
-      link: "#",
-    },
+    // {
+    //   name: "Focaccia 15x15cm ",
+    //   description:
+    //     "Focaccia com 48 horas de fermentação. Alecrim e sal grosso. Produzida com farinha italiana. Essa mini focaccia tem 4 lados cheios de caramelização na casca",
+    //   price: "R$ 18,00",
+    //   image: "/images/focaccia15x15.png",
+    //   link: "#",
+    // },
   ];
 
   const choriPizza = {
@@ -186,7 +186,7 @@ const Products = () => {
           className="mb-16 text-center"
         >
           <h2 className="mb-6 text-4xl font-bold text-gray-800 md:text-5xl">
-            Próxima Fornada - 21/08/2025
+            Próxima Fornada - 28/08/2025
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-gray-600">
             Pizzas napolitanas pré-assadas prontas para finalizar no seu forno,
