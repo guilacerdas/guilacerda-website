@@ -186,7 +186,7 @@ const Products = () => {
           className="mb-16 text-center"
         >
           <h2 className="mb-6 text-4xl font-bold text-gray-800 md:text-5xl">
-            Próxima Fornada - 28/08/2025
+            Próxima Fornada - 04/09/2025
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-gray-600">
             Pizzas napolitanas pré-assadas prontas para finalizar no seu forno,
