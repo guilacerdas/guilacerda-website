@@ -9,13 +9,13 @@ import MobileBottomNav from "./components/MobileBottomNav";
 function App() {
   return (
     <div className="min-h-screen pb-20 overflow-hidden bg-gradient-to-b from-orange-50 to-red-50">
-      <Hero />
+      {/* <Hero />
       <CartButton />
-      <Products />
-      <Events />
+      <Products /> */}
       <About />
+      <Events />
       <Footer />
-      <MobileBottomNav />
+      {/* <MobileBottomNav /> */}
     </div>
   );
 }
