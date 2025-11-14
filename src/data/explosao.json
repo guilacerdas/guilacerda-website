@@ -1,0 +1,165 @@
+{
+    "produtos": [
+        {
+            "codigo": 4373,
+            "nome": "BOLO KIT KAT VIEZZER",
+            "rendimento_kg": 0.890,
+            "insumos": [
+                {"codigo": 49369, "descricao": "MAT PRO DISCO PIZZA 15CM", "quantidade": 1.000, "unidade": "UN"},
+                {"codigo": 45749, "descricao": "MAT PRO MASSA PAO DE LO CHOC KG", "quantidade": 0.300, "unidade": "KG"},
+                {"codigo": 46947, "descricao": "MAT PRO NESTLE CREME DE LEITE KG", "quantidade": 0.075, "unidade": "KG"},
+                {"codigo": 46945, "descricao": "MAT PRO NESTLE LEITE COND KG INTEGRAL", "quantidade": 0.015, "unidade": "KG"},
+                {"codigo": 46921, "descricao": "MAT PRO NESTLE RECHEIO CHOC KIT KAT KG", "quantidade": 0.330, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4850,
+            "nome": "BOLO NINHO VIEZZER",
+            "rendimento_kg": 0.845,
+            "insumos": [
+                {"codigo": 49369, "descricao": "MAT PRO DISCO PIZZA 15CM", "quantidade": 1.000, "unidade": "UN"},
+                {"codigo": 45729, "descricao": "MAT PRO MASSA PAO DE LO KG", "quantidade": 0.230, "unidade": "KG"},
+                {"codigo": 54033, "descricao": "MAT PRO NESTLE COB/RECH NINHO KG", "quantidade": 0.330, "unidade": "KG"},
+                {"codigo": 34655, "descricao": "MAT PRO PADARIA LEITE KG", "quantidade": 0.075, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4478,
+            "nome": "TORTA VIEZZER KG BANOFFEE FAT",
+            "rendimento_kg": 1.340,
+            "insumos": [
+                {"codigo": 41580, "descricao": "MAT PRO GRANULADO BISC NEGRESCO KG", "quantidade": 0.210, "unidade": "KG"},
+                {"codigo": 46947, "descricao": "MAT PRO NESTLE CREME DE LEITE KG", "quantidade": 0.235, "unidade": "KG"},
+                {"codigo": 47121, "descricao": "MAT PRO NESTLE DOCE DE LEITE KG", "quantidade": 0.300, "unidade": "KG"},
+                {"codigo": 46926, "descricao": "MAT PRO NESTLE MIST P/MOUSSE CHOC BCO KG", "quantidade": 0.120, "unidade": "KG"},
+                {"codigo": 49029, "descricao": "MAT PRO PADARIA BANANA KG", "quantidade": 0.600, "unidade": "KG"},
+                {"codigo": 34655, "descricao": "MAT PRO PADARIA LEITE KG", "quantidade": 0.050, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4335,
+            "nome": "BOLO DOIS AMORES VIEZZER",
+            "rendimento_kg": 0.714,
+            "insumos": [
+                {"codigo": 49369, "descricao": "MAT PRO DISCO PIZZA 15CM", "quantidade": 1.000, "unidade": "UN"},
+                {"codigo": 45729, "descricao": "MAT PRO MASSA PAO DE LO KG", "quantidade": 0.274, "unidade": "KG"},
+                {"codigo": 46946, "descricao": "MAT PRO NESTLE COB/RECH CHOCOLATE KG", "quantidade": 0.150, "unidade": "KG"},
+                {"codigo": 46911, "descricao": "MAT PRO NESTLE COB/RECH LEITE COND KG", "quantidade": 0.030, "unidade": "KG"},
+                {"codigo": 46945, "descricao": "MAT PRO NESTLE LEITE COND KG INTEGRAL", "quantidade": 0.010, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4660,
+            "nome": "BOLO VIEZZER KG MOUSSE CAFE FAT",
+            "rendimento_kg": 1.250,
+            "insumos": [
+                {"codigo": 43138, "descricao": "MAT PRO CHOCOLATE EM PO KG", "quantidade": 0.010, "unidade": "KG"},
+                {"codigo": 16600, "descricao": "MAT PRO CREME CHANTILY CHOC KG", "quantidade": 0.130, "unidade": "KG"},
+                {"codigo": 45729, "descricao": "MAT PRO MASSA PAO DE LO KG", "quantidade": 0.200, "unidade": "KG"},
+                {"codigo": 43194, "descricao": "MAT PRO PADARIA CAFE SOLUVEL", "quantidade": 0.005, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4600,
+            "nome": "BOLO VIEZZER KG MOUSSE CHOC AO LEITE FAT",
+            "rendimento_kg": 1.282,
+            "insumos": [
+                {"codigo": 16600, "descricao": "MAT PRO CREME CHANTILY CHOC KG", "quantidade": 0.500, "unidade": "KG"},
+                {"codigo": 45749, "descricao": "MAT PRO MASSA PAO DE LO CHOC KG", "quantidade": 0.120, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4659,
+            "nome": "BOLO VIEZZER KG MOUSSE NAPOLITANO FAT",
+            "rendimento_kg": 1.230,
+            "insumos": [
+                {"codigo": 16328, "descricao": "MAT PRO CREME CHANTILLY KG", "quantidade": 0.330, "unidade": "KG"},
+                {"codigo": 16600, "descricao": "MAT PRO CREME CHANTILY CHOC KG", "quantidade": 0.130, "unidade": "KG"},
+                {"codigo": 45729, "descricao": "MAT PRO MASSA PAO DE LO KG", "quantidade": 0.200, "unidade": "KG"},
+                {"codigo": 17017, "descricao": "MAT PRO RECHEIO MORANGO KG", "quantidade": 0.100, "unidade": "KG"},
+                {"codigo": 20403, "descricao": "MAT PRO GANACHE CHOC BRANCO KG", "quantidade": 0.270, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4479,
+            "nome": "TORTA VIEZZER KG NEGRESCO FAT",
+            "rendimento_kg": 1.324,
+            "insumos": [
+                {"codigo": 41580, "descricao": "MAT PRO GRANULADO BISC NEGRESCO KG", "quantidade": 0.310, "unidade": "KG"},
+                {"codigo": 46947, "descricao": "MAT PRO NESTLE CREME DE LEITE KG", "quantidade": 0.473, "unidade": "KG"},
+                {"codigo": 42042, "descricao": "MAT PRO NESTLE GANACH CHOC MEIO AMARG KG", "quantidade": 0.125, "unidade": "KG"},
+                {"codigo": 46926, "descricao": "MAT PRO NESTLE MIST P/MOUSSE CHOC BCO KG", "quantidade": 0.236, "unidade": "KG"},
+                {"codigo": 34655, "descricao": "MAT PRO PADARIA LEITE KG", "quantidade": 0.100, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4337,
+            "nome": "BOLO NEGRESCO VIEZZER",
+            "rendimento_kg": 0.707,
+            "insumos": [
+                {"codigo": 49369, "descricao": "MAT PRO DISCO PIZZA 15CM", "quantidade": 1.000, "unidade": "UN"},
+                {"codigo": 41580, "descricao": "MAT PRO GRANULADO BISC NEGRESCO KG", "quantidade": 0.040, "unidade": "KG"},
+                {"codigo": 45729, "descricao": "MAT PRO MASSA PAO DE LO KG", "quantidade": 0.264, "unidade": "KG"},
+                {"codigo": 46946, "descricao": "MAT PRO NESTLE COB/RECH CHOCOLATE KG", "quantidade": 0.150, "unidade": "KG"},
+                {"codigo": 46947, "descricao": "MAT PRO NESTLE CREME DE LEITE KG", "quantidade": 0.080, "unidade": "KG"},
+                {"codigo": 46945, "descricao": "MAT PRO NESTLE LEITE COND KG INTEGRAL", "quantidade": 0.010, "unidade": "KG"},
+                {"codigo": 46926, "descricao": "MAT PRO NESTLE MIST P/MOUSSE CHOC BCO KG", "quantidade": 0.040, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4333,
+            "nome": "BOLO PRESTIGIO VIEZZER",
+            "rendimento_kg": 0.748,
+            "insumos": [
+                {"codigo": 16328, "descricao": "MAT PRO CREME CHANTILLY KG", "quantidade": 0.080, "unidade": "KG"},
+                {"codigo": 49369, "descricao": "MAT PRO DISCO PIZZA 15CM", "quantidade": 1.000, "unidade": "UN"},
+                {"codigo": 45749, "descricao": "MAT PRO MASSA PAO DE LO CHOC KG", "quantidade": 0.235, "unidade": "KG"},
+                {"codigo": 42042, "descricao": "MAT PRO NESTLE GANACH CHOC MEIO AMARG KG", "quantidade": 0.060, "unidade": "KG"},
+                {"codigo": 46945, "descricao": "MAT PRO NESTLE LEITE COND KG INTEGRAL", "quantidade": 0.010, "unidade": "KG"},
+                {"codigo": 46925, "descricao": "MAT PRO NESTLE RECHEIO BEIJINHO KG", "quantidade": 0.250, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4334,
+            "nome": "BOLO SENSACAO VIEZZER",
+            "rendimento_kg": 0.654,
+            "insumos": [
+                {"codigo": 49369, "descricao": "MAT PRO DISCO PIZZA 15CM", "quantidade": 1.000, "unidade": "UN"},
+                {"codigo": 45749, "descricao": "MAT PRO MASSA PAO DE LO CHOC KG", "quantidade": 0.250, "unidade": "KG"},
+                {"codigo": 46917, "descricao": "MAT PRO NESTLE COB/RECH MORANGO KG", "quantidade": 0.150, "unidade": "KG"},
+                {"codigo": 46945, "descricao": "MAT PRO NESTLE LEITE COND KG INTEGRAL", "quantidade": 0.010, "unidade": "KG"},
+                {"codigo": 46927, "descricao": "MAT PRO NESTLE MIST P/MOUSSE CHOC KG", "quantidade": 0.040, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 4849,
+            "nome": "TORTA SUFLAIR DUO FAT",
+            "rendimento_kg": 1.346,
+            "insumos": [
+                {"codigo": 41580, "descricao": "MAT PRO GRANULADO BISC NEGRESCO KG", "quantidade": 0.310, "unidade": "KG"},
+                {"codigo": 46947, "descricao": "MAT PRO NESTLE CREME DE LEITE KG", "quantidade": 0.473, "unidade": "KG"},
+                {"codigo": 42042, "descricao": "MAT PRO NESTLE GANACH CHOC MEIO AMARG KG", "quantidade": 0.125, "unidade": "KG"},
+                {"codigo": 46926, "descricao": "MAT PRO NESTLE MIST P/MOUSSE CHOC BCO KG", "quantidade": 0.236, "unidade": "KG"},
+                {"codigo": 34655, "descricao": "MAT PRO PADARIA LEITE KG", "quantidade": 0.100, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 45749,
+            "nome": "MASSA PAO DE LO CHOCOLATE",
+            "rendimento_kg": 8.000,
+            "insumos": [
+                {"codigo": 17064, "descricao": "MAT PRO MIST PAO DE LO CHOC KG", "quantidade": 5.000, "unidade": "KG"},
+                {"codigo": 47988, "descricao": "MAT PRO PADARIA OVO INTEGRAL PASTEURIZADO", "quantidade": 3.000, "unidade": "KG"}
+            ]
+        },
+        {
+            "codigo": 45729,
+            "nome": "MASSA PAO DE LO BRANCO",
+            "rendimento_kg": 10.000,
+            "insumos": [
+                {"codigo": 12604, "descricao": "MAT PRO MIST PAO DE LO KG", "quantidade": 5.000, "unidade": "KG"},
+                {"codigo": 47988, "descricao": "MAT PRO PADARIA OVO INTEGRAL PASTEURIZADO", "quantidade": 3.000, "unidade": "KG"}
+            ]
+        }
+    ]
+}
