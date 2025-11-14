@@ -71,8 +71,8 @@ export default function ExplosaoPage() {
               Explosão de Materiais
             </h1>
             <p className="mt-1 text-sm sm:text-base text-slate-400">
-              Ferramenta interna para Ju &amp; Larissa registrarem insumos
-              proporcionais ao peso pesado no inventário.
+              Ferramenta interna para coleta de insumos proporcionais ao peso
+              aferido no inventário.
             </p>
           </div>
           <div className="text-xs sm:text-sm text-slate-400 sm:text-right">
