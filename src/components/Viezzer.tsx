@@ -4,10 +4,26 @@ import { explodirProduto, DB } from "../utils/explosao";
 
 const banco = db as DB;
 
+interface ResultadoExplosao {
+  produto: {
+    nome: string;
+    codigo: number;
+    rendimento_kg: number;
+    peso_medido_kg: number;
+    fator: number;
+  };
+  insumos: Array<{
+    codigo: number;
+    descricao: string;
+    quantidade_real: number;
+    unidade: string;
+  }>;
+}
+
 export default function ExplosaoPage() {
   const [codigoSelecionado, setCodigoSelecionado] = useState("");
   const [peso, setPeso] = useState("");
-  const [resultado, setResultado] = useState<any | null>(null);
+  const [resultado, setResultado] = useState<ResultadoExplosao | null>(null);
   const [erro, setErro] = useState<string | null>(null);
 
   const produtosOrdenados = useMemo(
@@ -36,8 +52,12 @@ export default function ExplosaoPage() {
     try {
       const res = explodirProduto(banco, codigoNum, pesoNum);
       setResultado(res);
-    } catch (err: any) {
-      setErro(err.message || "Erro ao calcular explosão.");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setErro(err.message);
+      } else {
+        setErro(String(err) || "Erro ao calcular explosão.");
+      }
     }
   };
 
@@ -195,29 +215,31 @@ export default function ExplosaoPage() {
                       </tr>
                     </thead>
                     <tbody>
-                      {resultado.insumos.map((ins: any, idx: number) => (
-                        <tr
-                          key={ins.codigo + "-" + idx}
-                          className={
-                            idx % 2 === 0
-                              ? "bg-slate-900/60"
-                              : "bg-slate-900/30"
-                          }
-                        >
-                          <td className="px-3 py-2 border-b border-slate-800">
-                            {ins.codigo}
-                          </td>
-                          <td className="px-3 py-2 border-b border-slate-800">
-                            {ins.descricao}
-                          </td>
-                          <td className="px-3 py-2 font-semibold text-right border-b border-slate-800">
-                            {ins.quantidade_real.toFixed(3)}
-                          </td>
-                          <td className="px-3 py-2 border-b border-slate-800">
-                            {ins.unidade}
-                          </td>
-                        </tr>
-                      ))}
+                      {resultado.insumos.map(
+                        (ins: ResultadoExplosao["insumos"][0], idx: number) => (
+                          <tr
+                            key={ins.codigo + "-" + idx}
+                            className={
+                              idx % 2 === 0
+                                ? "bg-slate-900/60"
+                                : "bg-slate-900/30"
+                            }
+                          >
+                            <td className="px-3 py-2 border-b border-slate-800">
+                              {ins.codigo}
+                            </td>
+                            <td className="px-3 py-2 border-b border-slate-800">
+                              {ins.descricao}
+                            </td>
+                            <td className="px-3 py-2 font-semibold text-right border-b border-slate-800">
+                              {ins.quantidade_real.toFixed(3)}
+                            </td>
+                            <td className="px-3 py-2 border-b border-slate-800">
+                              {ins.unidade}
+                            </td>
+                          </tr>
+                        )
+                      )}
                     </tbody>
                   </table>
                 </div>
