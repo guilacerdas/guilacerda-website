@@ -20,7 +20,7 @@ interface ResultadoExplosao {
   }>;
 }
 
-export default function Viezzer() {
+export default function ExplosaoPage() {
   const [codigoSelecionado, setCodigoSelecionado] = useState("");
   const [peso, setPeso] = useState("");
   const [resultado, setResultado] = useState<ResultadoExplosao | null>(null);
